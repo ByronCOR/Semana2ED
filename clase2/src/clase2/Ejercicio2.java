@@ -13,7 +13,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class ejercicio3 {
+public class Ejercicio2 {
 
     /**
      * @param args the command line arguments
@@ -22,8 +22,7 @@ public class ejercicio3 {
         // TODO code application logic here
 
         try (FileWriter escribir = new FileWriter("eucalipto.txt");) {
-            escribir.write("que tal\n");
-            escribir.append("EJEMPLO2\n").append("HOLA\n");
+            escribir.write("que tal");
             escribir.close();
             System.out.println("El archivo se ha escrito");
 
@@ -31,7 +30,6 @@ public class ejercicio3 {
             System.out.println("Error de escritura");
         }
         
-        //leer el archivo
         System.out.println("Leemos el archivo");
                 try (FileReader leer = new FileReader("eucalipto.txt");) {
                     int i;
@@ -41,7 +39,5 @@ public class ejercicio3 {
         } catch (IOException e) {
             System.out.println("Error de lectura");
         }
-                File flujo = new File("eucalipto.txt");
-                System.out.println("Longitud del archivo: "+flujo.length());
     }
 }

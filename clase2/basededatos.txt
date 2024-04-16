@@ -1,0 +1,10 @@
+Nombre:RosaNombre:RosaNombre:15Nombre:solNombre:12Nombre:solEdad15Nombre:rosaEdad14Nombre:mariaEdad13Nombre:juanaEdad15Nombre:lolaEdad16Nombre:pedroEdad18Nombre:ros
+Edad11
+Nombre:era
+Edad13
+Nombre:juana
+Edad15
+Nombre:pedro
+Edad16
+Nombre:lalo
+Edad17

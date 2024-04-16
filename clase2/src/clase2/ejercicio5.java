@@ -9,11 +9,12 @@ package clase2;
  * @author utpl
  */
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class ejercicio3 {
+public class ejercicio5 {
 
     /**
      * @param args the command line arguments
@@ -21,27 +22,26 @@ public class ejercicio3 {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        try (FileWriter escribir = new FileWriter("eucalipto.txt");) {
-            escribir.write("que tal\n");
-            escribir.append("EJEMPLO2\n").append("HOLA\n");
-            escribir.close();
-            System.out.println("El archivo se ha escrito");
-
+        try (FileOutputStream salida = new FileOutputStream("gato.txt", true);) {
+            String data = "hola gato\n";
+            byte b[] = data.getBytes();
+            salida.write(b);
+            salida.close();
+            System.out.println("Se ha escrito en el archivo");
         } catch (IOException e) {
             System.out.println("Error de escritura");
         }
-        
+
         //leer el archivo
         System.out.println("Leemos el archivo");
-                try (FileReader leer = new FileReader("eucalipto.txt");) {
-                    int i;
-                    while((i=leer.read())!=-1){
-            System.out.print((char)i);
-                    }
+        try (FileInputStream entrada = new FileInputStream("gato.txt");) {
+            int i;
+            while ((i = entrada.read()) != -1) {
+                System.out.print((char) i);
+            }
         } catch (IOException e) {
             System.out.println("Error de lectura");
         }
-                File flujo = new File("eucalipto.txt");
-                System.out.println("Longitud del archivo: "+flujo.length());
+
     }
 }

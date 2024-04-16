@@ -31,7 +31,7 @@ public class ejercicio4 {
             System.out.println("Error de escritura");
         }
         
-        //leer el archivo
+        //leer el archivo4
         System.out.println("Leemos el archivo");
                 try (FileReader leer = new FileReader("eucalipto.txt");) {
                     int i;
